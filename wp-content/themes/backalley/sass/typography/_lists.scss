@@ -1,0 +1,39 @@
+li {
+  padding-bottom: $space-s;
+}
+
+/**
+ * Lists
+ */
+ul, ol, dl {
+    padding-left: $space-m;
+    margin-top:0;
+    margin-bottom: $space-s;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+.list-reset {
+    list-style: none;
+    padding-left: 0;
+    li{
+      padding-bottom:0;
+    }
+}
+.list-style-none { list-style: none }
+
+dl{
+  list-style:square;
+  dt{
+    font-weight:bold;
+    padding: $space-s;
+  }
+  dd{
+    padding: $space-s;
+    margin:0;
+  }
+}

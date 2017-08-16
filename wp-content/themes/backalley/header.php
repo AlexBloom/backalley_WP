@@ -16,7 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -25,30 +24,16 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'backalley' ); ?></a>
 
 	<!-- Notification -->
-
-	
-
-	<div class="notification bg-gold px-l py-m text-center">
-		<span class="sans black bold h5">Heads Up! The Shop is CLOSED till further notice for a power outage. Controlled by toggle in back end.</span>
-	</div>
+	<?php
+		$toggle = get_field('notification_toggle');
+		if ($toggle):
+	?>
+		<div class="notification bg-gold px-l py-m text-center">
+			<span class="sans black bold h5"> <?php the_field('notification_text'); ?> </span>
+		</div>
+	<?php endif; ?>
 
 	<header id="masthead" class="site-header relative bg-black white px-l cf ">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
 
 
 
@@ -63,7 +48,7 @@
 				</p>
 			</div>
 			<div class="col-12 text-center max-width-s mx-auto">
-				<a href="{{site.baseurl}}/" class="">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="">
 						<div class="logo mt-m mx-auto text-center s-hide s-m-hide" style="width:6rem; height:6rem;">
 							<svg version="1.1" id="Logo" x="0px" y="0px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
 							<path fill="#C39A5A" d="M134.591,138.725c0.253-2.457-0.235-4.627-0.387-6.933c-0.302-4.812-0.101-9.676-0.168-14.505
@@ -127,8 +112,7 @@
 
 
 <!-- dynamic  -->
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'backalley' ); ?></button>
+		<nav id="site-navigation" class="main-navigation text center sans">
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
@@ -139,9 +123,9 @@
 
 <!-- static -->
 		  <nav class="text-center sans">
-		    <a href="{{site.baseurl}}/bikes"   class="inline-block link p-m"> <span class="white">Bikes</span></a>
-		    <a href="{{site.baseurl}}/service" class="inline-block link p-m"> <span class="white">Service</span></a>
-		    <a href="{{site.baseurl}}/news"    class="inline-block link p-m"> <span class="white">News</span></a>
+		    <a href="<?php echo esc_url( home_url( '/' ) ); ?>/bikes"   class="inline-block link p-m"> <span class="white">Bikes</span></a>
+		    <a href="<?php echo esc_url( home_url( '/' ) ); ?>/service" class="inline-block link p-m"> <span class="white">Service</span></a>
+		    <a href="<?php echo esc_url( home_url( '/' ) ); ?>/news"    class="inline-block link p-m"> <span class="white">News</span></a>
 		  </nav>
 
 

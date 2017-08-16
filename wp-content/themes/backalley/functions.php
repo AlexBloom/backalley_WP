@@ -101,13 +101,44 @@ add_action( 'after_setup_theme', 'backalley_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function backalley_widgets_init() {
+
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'backalley' ),
-		'id'            => 'sidebar-1',
+		'name'          => esc_html__( 'Notification Bar', 'backalley' ),
+		'id'            => 'notification-bar',
 		'description'   => esc_html__( 'Add widgets here.', 'backalley' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Seek (1)', 'backalley' ),
+		'id'            => 'footer-seek',
+		'description'   => esc_html__( 'Add widgets here.', 'backalley' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="caps">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Contact (2)', 'backalley' ),
+		'id'            => 'footer-contact',
+		'description'   => esc_html__( 'Add widgets here.', 'backalley' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="caps">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Follow (3)', 'backalley' ),
+		'id'            => 'footer-follow',
+		'description'   => esc_html__( 'Add widgets here.', 'backalley' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="caps">',
 		'after_title'   => '</h2>',
 	) );
 }
@@ -118,6 +149,7 @@ add_action( 'widgets_init', 'backalley_widgets_init' );
  */
 function backalley_scripts() {
 	wp_enqueue_style( 'backalley-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'backalley-main',  get_template_directory_uri() . '/css/main.css', array(), filemtime( get_stylesheet_directory() . '/css/main.css' ),'screen' );
 
 	wp_enqueue_script( 'backalley-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

@@ -1,0 +1,32 @@
+@import
+  "btns",
+  "icons",
+  "links",
+  "media"
+;
+
+table{
+ margin: $space-m 0;
+ padding: 0;
+ border-top:1px dotted $black20;
+ border-right:1px dotted $black20;
+}
+tr{
+
+}
+th{
+  font-weight: 600;
+}
+td, th{
+  text-align:center;
+  line-height:1.5;
+  padding:$space-s;
+  border-bottom:1px dotted $black20;
+  border-left:1px dotted $black20;
+}
+th:first-child{
+  text-align:left;
+}
+td:first-child{
+  text-align:left;
+}

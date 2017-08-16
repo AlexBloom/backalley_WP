@@ -1,0 +1,76 @@
+$link-color: $black80;
+$link-color--hover: $black;
+$link-color--active: $black;
+
+a {
+  transition: all .2s;
+  color:$link-color;
+  text-decoration:none;
+  box-shadow: 0 1px 0 0 $black50;
+}
+a:link,
+a:visited {
+  color: $link-color;
+}
+a:hover   {
+  transition: all .2s;
+  box-shadow: 0 2px 0 0 $black;
+}
+a:active {
+  transition: all .2s;
+  color: $link-color--active;
+}
+.link {
+  text-decoration: none;
+  box-shadow:none;
+
+  &:hover{
+    text-decoration:none;
+    box-shadow:none;
+    background-image:none;
+  }
+}
+.link-underline{
+  text-decoration:underline;
+  text-decoration-skip: ink;
+}
+a.button{
+  color:$black;
+  border-top:1px solid $gold;
+  border-bottom:1px solid $gold;
+  box-shadow: 0 0 0 0 transparent;
+  text-decoration:none;
+  padding:$space-m $space-l;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-weight:600;
+  font-size:.875rem;
+  position: relative;
+  &:before{
+    transition: all .2s;
+    margin:.25rem -.5rem;
+    content:' ';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display:block;
+    border-top:1px solid $gold;
+    border-bottom:1px solid $gold;
+  }
+  &:hover{
+    &:before{
+      margin:.25rem 0rem;
+    }
+  }
+}
+a.btn-big{
+    padding:$space-m $space-l;
+}
+.color-inherit {
+  color: inherit;
+}
+.current{
+  box-shadow: 0 .05em 0 0 $black;
+}

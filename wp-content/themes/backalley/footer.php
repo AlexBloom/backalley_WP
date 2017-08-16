@@ -13,18 +13,46 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'backalley' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'backalley' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'backalley' ), 'backalley', '<a href="https://automattic.com/">Underscores.me</a>' );
-			?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="site-footer cf bg-black-9 white-9 text-center p-l">
+	  <div class="cf">
+		  <div class="col col-12 m-col-4 text-center">
+		    <svg style="width:4rem; height:4rem;">
+		      <use xlink:href="#seek" />
+		    </svg>
+		    <h2 class="caps">
+		      Seek
+		    </h2>
+		    <p>100 Boyd Street<br>
+		       Carrboro, NC 27510<br>
+		       <a href="#">google maps</a>
+		    </p>
+		  </div>
+		  <div class="col col-12 m-col-4 text-center">
+		    <svg style="width:4rem; height:4rem;">
+		      <use xlink:href="#contact" />
+		    </svg>
+		    <h2 class="caps">
+		      Contact
+		    </h2>
+		    <p><a href="mailto:email@backalleybikes.net"><span class="white">email@backalleybikes.net</span></a><br>
+		       <a href="tel:919-967-7777"><span class="white">919-967-7777</span></a>
+		    </p>
+		  </div>
+		  <div class="col col-12 m-col-4 text-center">
+		    <svg style="width:4rem; height:4rem;">
+		      <use xlink:href="#follow" />
+		    </svg>
+		    <h2 class="caps">
+		      Follow
+		    </h2>
+		    <p><a href=""><span class="white">Instagram</span></a><br>
+		       <a href=""><span class="white">Facebook</span></a><br>
+		    </p>
+		  </div>
+	  </div>
+	  <div class="cf gold border-top-dotted pt-l">
+	    <p>Copyright © 2015–2017, Back Alley Bikes | Site by <a class="gold" href="http://alexbloom.co">Alex Bloom</a></p>
+	  </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

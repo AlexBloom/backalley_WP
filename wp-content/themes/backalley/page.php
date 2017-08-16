@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area max-width-l mx-auto my-xl px-l">
 		<main id="main" class="site-main">
 
 			<?php
