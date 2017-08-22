@@ -148,7 +148,7 @@ add_action( 'widgets_init', 'backalley_widgets_init' );
  * Enqueue scripts and styles.
  */
 function backalley_scripts() {
-	wp_enqueue_style( 'backalley-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'backalley-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_uri() ),'screen' );
 	wp_enqueue_style( 'backalley-main',  get_template_directory_uri() . '/css/main.css', array(), filemtime( get_stylesheet_directory() . '/css/main.css' ),'screen' );
 
 	wp_enqueue_script( 'backalley-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

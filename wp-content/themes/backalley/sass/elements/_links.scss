@@ -6,28 +6,47 @@ a {
   transition: all .2s;
   color:$link-color;
   text-decoration:none;
-  box-shadow: 0 1px 0 0 $black50;
+  box-shadow: 0 1px 0 0;
 }
-a:link,
 a:visited {
-  color: $link-color;
+  color: $purple;
 }
 a:hover   {
   transition: all .2s;
-  box-shadow: 0 2px 0 0 $black;
+  box-shadow: 0 2px 0 0 ;
 }
 a:active {
   transition: all .2s;
   color: $link-color--active;
 }
+a:hover,
+a:focus,
+a:active {
+	color: $link-color--hover;
+}
 .link {
   text-decoration: none;
   box-shadow:none;
-
   &:hover{
     text-decoration:none;
     box-shadow:none;
     background-image:none;
+  }
+  &.active{
+    background-color:$gold;
+    //box-shadow: 0 2px 0 0 $gold;
+  }
+}
+nav{
+  a{
+    box-shadow:none;
+    &:hover,
+    &:active{
+      color:$gold;
+    }
+    &:focus{
+      outline:none;
+    }
   }
 }
 .link-underline{
@@ -73,4 +92,33 @@ a.btn-big{
 }
 .current{
   box-shadow: 0 .05em 0 0 $black;
+}
+.current_page_item{
+  a{
+    box-shadow: 0 .05em 0 0 $gold;
+  }
+}
+a.gold{
+  color:$gold;
+}
+a.hover-gold{
+  &:hover{
+    color:$gold;
+  }
+}
+a.purple{
+  color:$purple;
+}
+a.hover-purple{
+  &:hover{
+    color:$purple;
+  }
+}
+a.white{
+  color:$white;
+}
+a.hover-white{
+  &:hover{
+    color:$white;
+  }
 }

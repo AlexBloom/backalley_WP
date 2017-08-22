@@ -85,16 +85,23 @@ get_header(); ?>
 			</section>
 			<div class="bg-gold">
 			<div class="max-width-xl mx-auto">
-				<div class="col-8 py-s mx-auto bg-white stairAscend"></div>
-				<div class="col-4 py-s mx-auto bg-white stairAscend"></div>
-				<div class="col-2 py-s mx-auto bg-white stairAscend"></div>
-				<div class="col-1 py-s mx-auto bg-white keystoneAscend"></div>
+				<!-- <div class="col-8 py-s mx-auto bg-white stairAscend"></div> -->
+				<!-- <div class="col-4 py-s mx-auto bg-white stairAscend"></div> -->
+				<!-- <div class="col-2 py-s mx-auto bg-white stairAscend"></div> -->
+				<!-- <div class="col-1 py-s mx-auto bg-white keystoneAscend"></div> -->
+				<div style="width:96%;" class=" mx-auto py-xs bg-white stairAscend"></div>
+				<div style="width:48%;" class=" mx-auto py-xs bg-white stairAscend"></div>
+				<div style="width:24%;" class=" mx-auto py-xs bg-white stairAscend"></div>
+				<div style="width:12%;" class=" mx-auto py-xs bg-white stairAscend"></div>
+				<div style="width:6%; " class=" mx-auto py-xs bg-white stairAscend"></div>
+				<div style="width:3%; " class=" mx-auto py-xs bg-white stairAscend"></div>
+				<div style="width:1.5%;"class=" mx-auto py-xs bg-white keystoneAscend"></div>
 			</div>
 			</div>
 			<section class="py-xxl px-l bg-gold black">
 			<div class="text-center">
 				<h5 class="h5 caps">About</h5>
-				<h2 class="m-h2 l-h1 caps vhs-flicker"><?php the_field('about_title'); ?></h2>
+				<h2 class="m-h2 l-h1 caps"><?php the_field('about_title'); ?></h2>
 			</div>
 			<div class="measure mx-auto">
 				<?php the_field('about_text'); ?>
@@ -115,14 +122,14 @@ get_header(); ?>
 			<div class="cf max-width-xxl mx-auto">
 				<div class="col col-12 m-col-5 p-l">
 					<div class="max-width-s mx-auto">
-						<img src="{{site.baseurl}}/img/home/doors.png" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/home/doors.png" alt="">
 					</div>
 				</div>
 				<div class="col col-12 m-col-7">
 					<h5 class="h5 caps">Reviews</h5>
-					<h2 class="m-h2 l-h1 lh-solid"><?php get_field('reviews_title'); ?></h2>
+					<h2 class="m-h2 l-h1 lh-solid"><?php the_field('reviews_title'); ?></h2>
 					<div class="measure py-l">
-						<?php get_field('reviews_content'); ?>
+						<?php the_field('reviews_content'); ?>
 						<q>
 							I have been taking my bikes to Jason and Rob for years. They are both very knowledgeable, friendly, and clear about what needs to be repaired, what can wait, what the options are, and the turnaround for getting it done. Since Back Alley is not a corporate affiliate with the goal to sell sell sell, there is no "don't you want to replace this old thing?" conversation. I want to take care of my bike; they want to take care of my bike. We have the same goal before I walk in the door. And they always do a great job. My kind of place.
 						</q>
@@ -150,7 +157,7 @@ get_header(); ?>
 
 			<section class="py-xxl px-l bg-gold text-center black">
 			<h5 class="h5 caps">Our Stock</h5>
-			<h2 class="m-h2 l-h1 vhs-flicker"><?php the_field('brands_title'); ?></h2>
+			<h2 class="m-h2 l-h1"><?php the_field('brands_title'); ?></h2>
 			<div class="cf mx-auto max-width-l">
 				<?php
 					$brandlink_1 = get_field('brand_logo_1_link');
@@ -158,7 +165,7 @@ get_header(); ?>
 					$brandlink_3 = get_field('brand_logo_3_link');
 				?>
 				<div class="col col-4">
-					<a href="<?php echo $brandlink_1 ?>">
+					<a href="<?php echo $brandlink_1 ?>" class="link">
 						<?php
 						$brand_logo_1 = get_field('brand_logo_1');
 						if( !empty($brand_logo_1) ): ?>
@@ -167,7 +174,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="col col-4">
-					<a href="<?php echo $brandlink_2 ?>">
+					<a href="<?php echo $brandlink_2 ?>" class="link">
 						<?php
 						$brand_logo_2 = get_field('brand_logo_2');
 						if( !empty($brand_logo_2) ): ?>
@@ -176,7 +183,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="col col-4">
-					<a href="<?php echo $brandlink_3 ?>">
+					<a href="<?php echo $brandlink_3 ?>" class="link">
 						<?php
 						$brand_logo_3 = get_field('brand_logo_1');
 						if( !empty($brand_logo_3) ): ?>

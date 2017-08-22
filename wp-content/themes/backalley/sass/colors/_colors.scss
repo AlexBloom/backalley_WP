@@ -1,7 +1,9 @@
 $color-list: (
 "white"    #FFF,
-"gold"     #C59C5B,
+// "gold"     #C59C5B,
+"gold"     #d2ab6d,
 "dk-gold"  #8C6931,
+"purple"   #ab57e8,
 "charcoal" #454644,
 "black"    #000
 );
@@ -22,7 +24,7 @@ $color-list: (
 }
 
 $gold: #C59C5B;
-
+$purple: #ab57e8;
 // Nice Gradients from the generator
 //linear-gradient(45deg, rgb(239, 114, 244), rgb(106, 232, 255)); background-color: rgb(106, 232, 255);"
 

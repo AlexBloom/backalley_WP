@@ -45,13 +45,13 @@
 		    <h2 class="caps">
 		      Follow
 		    </h2>
-		    <p><a href=""><span class="white">Instagram</span></a><br>
-		       <a href=""><span class="white">Facebook</span></a><br>
+		    <p><a href="" class="white hover-purple">Instagram</a><br>
+		       <a href="" class="white hover-purple">Facebook </a><br>
 		    </p>
 		  </div>
 	  </div>
 	  <div class="cf gold border-top-dotted pt-l">
-	    <p>Copyright © 2015–2017, Back Alley Bikes | Site by <a class="gold" href="http://alexbloom.co">Alex Bloom</a></p>
+	    <p>Copyright © 2015–2017, Back Alley Bikes | Site by <a class="white hover-purple" href="http://alexbloom.co">Alex Bloom</a></p>
 	  </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -506,19 +506,19 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
+/*a {
 	color: royalblue;
-}
+}*/
 
-a:visited {
+/*a:visited {
 	color: purple;
-}
+}*/
 
-a:hover,
+/*a:hover,
 a:focus,
 a:active {
 	color: midnightblue;
-}
+}*/
 
 a:focus {
 	outline: thin dotted;
@@ -532,11 +532,15 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+
+
+/*
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
+	/*float: left;
 	width: 100%;
+	text-align:center;
 }
 
 .main-navigation ul {
@@ -547,14 +551,16 @@ a:active {
 }
 
 .main-navigation li {
-	float: left;
+	/*float: left;
 	position: relative;
+	display:inline-block;
 }
 
 .main-navigation a {
-	display: block;
+	display: inline-block;
 	text-decoration: none;
-}
+	color:#fff;
+}*/
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);

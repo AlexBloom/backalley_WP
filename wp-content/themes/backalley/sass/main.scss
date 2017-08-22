@@ -47,3 +47,25 @@ body{
 span.kern{
   letter-spacing:.02em;
 }
+.menu{
+  ul{
+    text-align:center;
+    li{
+      display:inline-block;
+      a{
+        display:inline-block;
+        text-decoration:none;
+        padding:$space-m;
+        color:$white;
+        &:hover{
+          color:$gold;
+        }
+      &.current_page_item{
+        a{
+          border-bottom:1px;
+        }
+      }
+      }
+    }
+  }
+}

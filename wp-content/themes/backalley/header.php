@@ -28,15 +28,12 @@
 		$toggle = get_field('notification_toggle');
 		if ($toggle):
 	?>
-		<div class="notification bg-gold px-l py-m text-center">
+		<div class="notification bg-purple px-l py-m text-center">
 			<span class="sans black bold h5"> <?php the_field('notification_text'); ?> </span>
 		</div>
 	<?php endif; ?>
 
 	<header id="masthead" class="site-header relative bg-black white px-l cf ">
-
-
-
 			<div class="col top-0 right-0 s-hide s-m-hide text-center">
 				<p><a href="mailto:email@backalleybikes.net"><span class="gold">email@backalleybikes.net</span></a><br>
 					 <a href="tel:919-967-7777"><span class="gold">919-967-7777</span></a>
@@ -112,7 +109,7 @@
 
 
 <!-- dynamic  -->
-		<nav id="site-navigation" class="main-navigation text center sans">
+		<nav id="site-navigation" class="menu main-navigation text-center sans">
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
@@ -122,11 +119,11 @@
 		</nav><!-- #site-navigation -->
 
 <!-- static -->
-		  <nav class="text-center sans">
+		  <!-- <nav class="text-center sans">
 		    <a href="<?php echo esc_url( home_url( '/' ) ); ?>/bikes"   class="inline-block link p-m"> <span class="white">Bikes</span></a>
 		    <a href="<?php echo esc_url( home_url( '/' ) ); ?>/service" class="inline-block link p-m"> <span class="white">Service</span></a>
 		    <a href="<?php echo esc_url( home_url( '/' ) ); ?>/news"    class="inline-block link p-m"> <span class="white">News</span></a>
-		  </nav>
+		  </nav> -->
 
 
 
